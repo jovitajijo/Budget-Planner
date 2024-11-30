@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Mat Saleh';
+    src: url('fonts/Mat Saleh.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Mungil-Regular';
+    src: url('fonts/Mungil-Regular.ttf') format('truetype'); /* Adjust the path as necessary */
+}
+
+body {
+    font-family: 'Mungil-Regular', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FFB6C1, #FFDAB9);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.budget-title {
+    text-align: center; /* Centers the text horizontally */
+    font-size: 4em; /* Makes the title larger */
+    margin: 40px 0; /* Adds space above and below the title */
+    font-family: 'Mat Saleh'; /* Custom font */
+    color: #90EE90; /* Light green color */
+    
+    /* Add text shadow for a nice effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow with offset and blur */
+}
+
+.tracker-breakdown {
+    display: flex; /* Use Flexbox for layout */
+}
+
+.tracker, .breakdown {
+    flex: 1; /* Each box takes equal space */
+    margin: 10px; /* Space between boxes */
+    padding: 20px;
+    background-color: #fff; /* White background for boxes */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.tracker:hover, .breakdown:hover {
+    transform: translateY(-5px); /* Move box up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+.tracker h2, .breakdown h2 {
+    font-family: 'Mungil-Regular'; /* Custom font for Tracker and Breakdown headings */
+    
+}
+
+.budget-form {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+.budget-list {
+    margin-top: 20px; /* Space above list */
+}

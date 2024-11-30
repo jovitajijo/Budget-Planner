@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="budget-title">Budget Planner</h1>
+        <div class="tracker-breakdown">
+            <div class="tracker">
+                <h2>tracker</h2>
+                <div class="budget-form">
+                    <input type="text" id="description" placeholder="Description">
+                    <input type="number" id="amount" placeholder="Amount">
+                    <select id="type" onchange="toggleCategory()">
+                        <option value="income">Income</option>
+                        <option value="expense">Expense</option>
+                    </select>
+                    <div id="category-container" style="display: none;">
+                        <input type="text" id="category" placeholder="Category (e.g., Food, Entertainment)">
+                    </div>
+                    <button onclick="addItem()">Add</button>
+                </div>
+                <div class="budget-list">
+                    <h3>income</h3>
+                    <ul id="income-list"></ul>
+                    <h3>expenses</h3>
+                    <ul id="expense-list"></ul>
+                </div>
+            </div>
+            <div class="breakdown">
+                <h2>breakdown</h2>
+                <button onclick="showBreakdown()">View Breakdown</button>
+                <!-- Canvas for the pie chart -->
+                <canvas id="expenseChart" style="display:none;"></canvas> <!-- Initially hidden -->
+            </div>
+        </div>
+        <div class="budget-summary">
+            <h2>Summary</h2>
+            <p>total income: $<span id="total-income">0</span></p>
+            <p>total expenses: $<span id="total-expenses">0</span></p>
+            <p>balance: $<span id="balance">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
